@@ -6,53 +6,38 @@
 <title>巴士習慣 Bus Habits — 私隱政策 Privacy Policy</title>
 <style>
   :root {
-    --ink: #14333d; --muted: #4d6b74; --faint: #6e8990;
-    --rule: #dee8ea; --bg: #ffffff; --panel: #f5f9fa; --accent: #0e8e9f;
+    --ink:#14333d; --muted:#4d6b74; --faint:#6e8990;
+    --rule:#dee8ea; --bg:#ffffff; --accent:#0e8e9f;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --ink: #f5f9fa; --muted: #c7d5d9; --faint: #95abb1;
-      --rule: #1b3b44; --bg: #061a20; --panel: #04121a; --accent: #6cdde8;
+      --ink:#f5f9fa; --muted:#c7d5d9; --faint:#95abb1;
+      --rule:#1b3b44; --bg:#061a20; --accent:#6cdde8;
     }
   }
-  * { box-sizing: border-box; }
+  * { box-sizing:border-box; }
   body {
-    margin: 0; padding: 0 20px 96px;
-    background: var(--bg); color: var(--ink);
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
-          "PingFang HK", "Helvetica Neue", sans-serif;
-    -webkit-text-size-adjust: 100%;
+    margin:0; padding:0 20px 80px; background:var(--bg); color:var(--muted);
+    font:16px/1.7 -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang HK", sans-serif;
+    -webkit-text-size-adjust:100%;
   }
-  main { max-width: 720px; margin: 0 auto; }
-  header { padding: 64px 0 8px; }
-  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; letter-spacing: -0.01em; }
-  .sub { color: var(--faint); font-size: 14px; margin: 0; }
+  main { max-width:640px; margin:0 auto; }
+  header { padding:56px 0 4px; }
+  h1 { font-size:26px; line-height:1.25; margin:0 0 4px; color:var(--ink); }
+  .sub { color:var(--faint); font-size:14px; margin:0; }
   h2 {
-    font-size: 20px; margin: 44px 0 12px; padding-top: 24px;
-    border-top: 1px solid var(--rule); letter-spacing: -0.01em;
+    font-size:17px; margin:36px 0 10px; padding-top:20px;
+    border-top:1px solid var(--rule); color:var(--ink);
   }
-  h3 { font-size: 16px; margin: 24px 0 8px; }
-  p, li { color: var(--muted); }
-  strong { color: var(--ink); }
-  code {
-    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
-    background: var(--panel); padding: 1px 5px; border-radius: 4px; color: var(--ink);
+  p { margin:0 0 12px; }
+  ul { padding-left:20px; margin:0 0 12px; }
+  li { margin:5px 0; }
+  strong { color:var(--ink); }
+  a { color:var(--accent); }
+  footer {
+    margin-top:44px; padding-top:16px; border-top:1px solid var(--rule);
+    color:var(--faint); font-size:14px;
   }
-  .lede {
-    background: var(--panel); border-radius: 12px; padding: 18px 20px; margin: 28px 0 0;
-  }
-  .lede p { margin: 0 0 10px; }
-  .lede p:last-child { margin-bottom: 0; }
-  ul { padding-left: 20px; }
-  li { margin: 6px 0; }
-  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
-  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); }
-  th { color: var(--ink); font-weight: 600; }
-  td { color: var(--muted); }
-  .en { margin-top: 8px; }
-  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
-           color: var(--faint); font-size: 14px; }
-  a { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -60,96 +45,39 @@
 
 <header>
   <h1>巴士習慣 Bus Habits</h1>
-  <p class="sub">私隱政策 · Privacy Policy — 最後更新 2026年8月30日</p>
+  <p class="sub">私隱政策 · 最後更新 2026 年 8 月 31 日</p>
 </header>
 
-<div class="lede">
-  <p><strong>一句講晒：</strong>你揀嘅路線、車站、習慣名，全部只留喺你部機同你自己個 iCloud。開發者攞唔到，亦都冇一部我哋嘅伺服器收過。</p>
-  <p>App 會收匿名使用統計（例如「有人加咗一條路線」），但<strong>結構上載唔到你打過嘅字</strong>——下面第 3 節解釋點解呢個唔係承諾，係做唔到。</p>
-</div>
+<h2>收集乜</h2>
+<p>冇帳戶，冇登入。你嘅習慣、路線同設定存喺你部機，開咗 iCloud 就存喺你自己嘅 iCloud，我睇唔到。</p>
+<p>App 會經 PostHog 收匿名使用統計（例如開過 App、搵過幾次車），連同一個匿名裝置編號。呢啲數據<strong>唔會連繫到你嘅身分，亦唔會用嚟追蹤你</strong>。App 唔會送出你打嘅字、站名或者習慣名。</p>
+<p>因為 App 直接向 data.gov.hk 同 1823 攞資料，呢啲服務會見到你部機嘅 IP 位址。</p>
 
-<h2>1. 冇帳戶，冇登入</h2>
-<p>呢個 app 冇註冊、冇登入、冇密碼。我哋唔知你係邊個，亦冇任何方法知。</p>
+<h2>刪除</h2>
+<p>刪走 App 就清走機上資料。iCloud 嗰份喺 iOS 設定 → 你個名 → iCloud 度刪。</p>
 
-<h2>2. 你嘅資料放喺邊</h2>
-<table>
-  <tr><th>資料</th><th>放喺</th><th>開發者睇唔睇到</th></tr>
-  <tr><td>習慣名、時間、星期</td><td>你部機</td><td>睇唔到</td></tr>
-  <tr><td>你儲低嘅路線同車站</td><td>你部機</td><td>睇唔到</td></tr>
-  <tr><td>通知設定</td><td>你部機</td><td>睇唔到</td></tr>
-  <tr><td>以上全部（如果你開咗 iCloud）</td><td>你自己個 iCloud 私人資料庫</td><td>睇唔到</td></tr>
-</table>
-<p>iCloud 同步用 Apple 嘅 CloudKit <strong>私人資料庫（private database）</strong>。呢個係 Apple 設計成開發者無法讀取嘅範圍——資料屬於你個 Apple 帳戶，唔係我哋嘅。你熄咗 iCloud，app 照用得，只係唔會喺你其他裝置出現。</p>
-<p>刪咗個 app 就刪咗機上嘅資料。iCloud 嗰份跟你個 Apple 帳戶走，可以喺 iOS 設定入面管理。</p>
+<h2>兒童</h2>
+<p>App 唔會刻意收集 13 歲以下人士嘅資料。</p>
 
-<h2>3. 使用統計：收乜，同點解收唔到你打嘅字</h2>
-<p>App 用 <strong>PostHog</strong>（歐盟伺服器）收匿名使用統計，目的係知道邊啲功能有人用、邊一步會令人放棄。</p>
-
-<h3>會收</h3>
-<ul>
-  <li>開過 app、去過邊個分頁</li>
-  <li>建立／刪除習慣，同<strong>數量</strong>（例如「而家有 3 個習慣」）</li>
-  <li>加路線流程行到邊一步，同係邊間營辦商（九巴／城巴／小巴／港鐵）</li>
-  <li>搜尋咗幾多次、<strong>有幾多個結果</strong>、你打咗<strong>幾多個字元</strong></li>
-  <li>到站畫面係正常、冇車、舊資料定係失敗</li>
-  <li>通知權限俾咗未、widget 有冇人㩒</li>
-</ul>
-
-<h3>收唔到</h3>
-<ul>
-  <li><strong>你打嘅搜尋字串。</strong>你搵「104」，離開部機嘅係 <code>query_length: 3</code>——只有長度，冇內容。</li>
-  <li><strong>車站名、目的地、路線號碼。</strong>只有營辦商代碼，例如 <code>carrier: "kmb"</code>。</li>
-  <li><strong>你自己改嘅習慣名。</strong>只有星期形態，例如 <code>weekdays</code>。</li>
-  <li>位置、通訊錄、相片、日曆、麥克風——app 由頭到尾都冇要求過呢啲權限。</li>
-</ul>
-
-<h3>點解呢個係機制，唔係承諾</h3>
-<p>每個統計事件都係同一個 Swift enum 嘅一個 case，而佢啲參數只可以係<strong>整數、真假值，或者一個封閉選項</strong>。即係話車站名或者搜尋字串<strong>根本冇位擺</strong>——唔係「我哋唔會咁做」，係編譯器唔畀。</p>
-<p>下面仲有第二層：一張白名單，喺事件離開部機之前過濾所有屬性，連唔經上面嗰層嘅程式碼都照隔。兩層都有自動測試，其中一個測試專登試用四個唔同 key 名偷運中文字出去，然後驗證一個都走唔甩。</p>
-
-<h3>裝置識別碼</h3>
-<p>PostHog 會產生一個<strong>匿名裝置識別碼</strong>跟住每個事件，用嚟分辨「同一部機開咗 app 三次」同「三部唔同機各開一次」。佢唔連住你嘅身分、唔跨 app、亦唔會用嚟做廣告追蹤。因為佢確實會離開部機，我哋喺 App Store 嘅私隱標籤照樣申報為 <strong>Device ID</strong>。</p>
-<p>App 冇廣告、冇 IDFA、冇 App Tracking Transparency 追蹤、冇畫面錄影（session replay）、亦冇收集當機報告。</p>
-<p class="sub">統計預設係開嘅。如果你唔想要，可以喺 App Store 留言話俾我哋知，我哋會考慮加一個開關。</p>
-
-<h2>4. App 會直接聯絡邊啲服務</h2>
-<p>到站時間唔經我哋嘅伺服器——<strong>我哋根本冇伺服器</strong>。你部機直接問政府同港鐵嘅公開資料介面：</p>
-<table>
-  <tr><th>服務</th><th>用嚟做乜</th></tr>
-  <tr><td>data.etabus.gov.hk（九巴）</td><td>路線、車站、實時到站</td></tr>
-  <tr><td>rt.data.gov.hk（城巴、港鐵）</td><td>路線、車站、實時到站</td></tr>
-  <tr><td>data.etagmb.gov.hk（專線小巴）</td><td>路線、車站、實時到站</td></tr>
-  <tr><td>www.1823.gov.hk</td><td>香港公眾假期表，用嚟喺假期唔出通知</td></tr>
-</table>
-<p><strong>老實講一句：</strong>因為係你部機直接問，呢啲服務會見到你嘅 IP 位址同你查緊邊條路線。呢個係「冇後端」設計嘅代價——好處係啲資料唔會經過我哋，壞處係我哋擋唔到中間嗰段。佢哋點處理由佢哋自己嘅政策決定。</p>
-<p>港鐵嘅綫路及車站對照表係<strong>隨 app 附帶</strong>嘅，唔會 runtime 下載。</p>
-
-<h2>5. 通知</h2>
-<p>提示通知係<strong>喺你部機自己排</strong>嘅本地通知，冇推送伺服器，冇任何嘢送出去。通知內容（每日嗰句同習慣名）由頭到尾都留喺機上。</p>
-
-<h2>6. 兒童</h2>
-<p>呢個 app 唔針對 13 歲以下兒童，亦唔會刻意收集佢哋嘅資料。</p>
-
-<h2>7. 改動</h2>
-<p>呢頁如有更新，頂部日期會跟住改。有實質改變（例如新增一個資料來源）會喺 app 更新說明入面講明。</p>
-
-<h2>8. 聯絡</h2>
-<p>有問題可以喺 App Store 留言，或者去 <a href="https://github.com/toysky731-lab/bus-habits-privacy/issues">GitHub issues</a> 開一條。</p>
+<h2>聯絡</h2>
+<p><a href="mailto:amigo.choi@fano.ai">amigo.choi@fano.ai</a></p>
 
 <h2 id="english">English</h2>
-<p class="en"><strong>Short version.</strong> Your habits, saved routes and stops stay on your device and in your own iCloud. The developer cannot read them, and there is no server of ours that ever receives them.</p>
-<p>The app collects anonymous usage analytics via <strong>PostHog</strong> (EU servers) — which screens are opened, where the add-route flow is abandoned, how many habits exist, which operator a route belongs to, and whether the arrivals screen was normal, empty, stale or failed.</p>
-<p><strong>It structurally cannot collect text you typed.</strong> Every analytics event is a case of a single Swift enum whose parameters may only be an integer, a boolean, or a closed set of options. A stop name or a search query has nowhere to go — searching for <code>104</code> sends <code>query_length: 3</code> and nothing else. A second allowlist filters every property before an event leaves the device. Both layers are covered by automated tests, including one that deliberately smuggles user text under four different key names and asserts none survives.</p>
-<p>PostHog attaches an <strong>anonymous device identifier</strong> to each event. It is not linked to your identity, not shared across apps and not used for advertising, but because it does leave the device it is declared as <strong>Device ID</strong> in the App Store privacy label. There is no IDFA, no ad tracking, no session replay and no crash-data collection.</p>
-<p>Arrival times are fetched by your device directly from data.gov.hk (KMB, Citybus, green minibus, MTR) and public holidays from 1823.gov.hk. <strong>There is no backend of ours.</strong> Because those requests come straight from your device, those services can see your IP address and which route you asked about; that is the trade-off of a no-backend design, and their handling of it is governed by their own policies.</p>
-<p>Reminders are local notifications scheduled on your device. Nothing is sent anywhere to deliver them.</p>
-<p>iCloud sync uses Apple's CloudKit <strong>private database</strong>, a scope Apple designs so that developers cannot read it. Deleting the app removes the on-device copy; the iCloud copy is managed through your Apple account in iOS Settings.</p>
+<p>No accounts, no sign-in. Your habits, routes and settings stay on your device, and in your own
+iCloud if iCloud is on. I cannot see them.</p>
+<p>The app sends anonymous usage statistics through PostHog, along with an anonymous device
+identifier. <strong>This is not linked to your identity and is not used to track you.</strong> Text
+you type, stop names and habit names are never sent.</p>
+<p>Because the app calls data.gov.hk and 1823 directly, those services can see your device's IP
+address.</p>
+<p>Deleting the app removes local data; the iCloud copy is removed in iOS Settings. The app does
+not knowingly collect data from children under 13.</p>
+<p>Contact: <a href="mailto:amigo.choi@fano.ai">amigo.choi@fano.ai</a></p>
 
 <footer>
-  巴士習慣 Bus Habits · 到站數據來自 data.gov.hk 資料一線通、港鐵公司開放數據及 1823。
+  <a href="support/">支援 Support</a>
 </footer>
 
-<p class="sub" style="margin-top:28px">有問題想問？見 <a href="support/">支援頁</a> · Questions? See <a href="support/">Support</a>.</p>
 </main>
 </body>
 </html>
