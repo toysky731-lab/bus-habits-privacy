@@ -6,53 +6,38 @@
 <title>巴士習慣 Bus Habits — 支援 Support</title>
 <style>
   :root {
-    --ink: #14333d; --muted: #4d6b74; --faint: #6e8990;
-    --rule: #dee8ea; --bg: #ffffff; --panel: #f5f9fa; --accent: #0e8e9f;
+    --ink:#14333d; --muted:#4d6b74; --faint:#6e8990;
+    --rule:#dee8ea; --bg:#ffffff; --accent:#0e8e9f;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --ink: #f5f9fa; --muted: #c7d5d9; --faint: #95abb1;
-      --rule: #1b3b44; --bg: #061a20; --panel: #04121a; --accent: #6cdde8;
+      --ink:#f5f9fa; --muted:#c7d5d9; --faint:#95abb1;
+      --rule:#1b3b44; --bg:#061a20; --accent:#6cdde8;
     }
   }
-  * { box-sizing: border-box; }
+  * { box-sizing:border-box; }
   body {
-    margin: 0; padding: 0 20px 96px;
-    background: var(--bg); color: var(--ink);
-    font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC",
-          "PingFang HK", "Helvetica Neue", sans-serif;
-    -webkit-text-size-adjust: 100%;
+    margin:0; padding:0 20px 80px; background:var(--bg); color:var(--muted);
+    font:16px/1.7 -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang HK", sans-serif;
+    -webkit-text-size-adjust:100%;
   }
-  main { max-width: 720px; margin: 0 auto; }
-  header { padding: 64px 0 8px; }
-  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; letter-spacing: -0.01em; }
-  .sub { color: var(--faint); font-size: 14px; margin: 0; }
+  main { max-width:640px; margin:0 auto; }
+  header { padding:56px 0 4px; }
+  h1 { font-size:26px; line-height:1.25; margin:0 0 4px; color:var(--ink); }
+  .sub { color:var(--faint); font-size:14px; margin:0; }
   h2 {
-    font-size: 20px; margin: 44px 0 12px; padding-top: 24px;
-    border-top: 1px solid var(--rule); letter-spacing: -0.01em;
+    font-size:17px; margin:36px 0 10px; padding-top:20px;
+    border-top:1px solid var(--rule); color:var(--ink);
   }
-  h3 { font-size: 16px; margin: 24px 0 8px; }
-  p, li { color: var(--muted); }
-  strong { color: var(--ink); }
-  code {
-    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
-    background: var(--panel); padding: 1px 5px; border-radius: 4px; color: var(--ink);
+  p { margin:0 0 12px; }
+  ul { padding-left:20px; margin:0 0 12px; }
+  li { margin:5px 0; }
+  strong { color:var(--ink); }
+  a { color:var(--accent); }
+  footer {
+    margin-top:44px; padding-top:16px; border-top:1px solid var(--rule);
+    color:var(--faint); font-size:14px;
   }
-  .lede {
-    background: var(--panel); border-radius: 12px; padding: 18px 20px; margin: 28px 0 0;
-  }
-  .lede p { margin: 0 0 10px; }
-  .lede p:last-child { margin-bottom: 0; }
-  ul { padding-left: 20px; }
-  li { margin: 6px 0; }
-  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
-  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); }
-  th { color: var(--ink); font-weight: 600; }
-  td { color: var(--muted); }
-  .en { margin-top: 8px; }
-  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule);
-           color: var(--faint); font-size: 14px; }
-  a { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -63,131 +48,39 @@
   <p class="sub">支援 · Support</p>
 </header>
 
-<div class="lede">
-  <p>有問題、有 bug、想加條線？直接電郵 <a href="mailto:amigo.choi@fano.ai">amigo.choi@fano.ai</a>。</p>
-  <p>寫返你部機型號同 iOS 版本，同埋係邊條路線／邊個站出事，會快好多。</p>
-</div>
+<h2>聯絡</h2>
+<p>有問題、有 bug、搵唔到條線，電郵 <a href="mailto:amigo.choi@fano.ai">amigo.choi@fano.ai</a>。
+寫返部機型號、iOS 版本同邊條路線，會快好多。</p>
 
-<h2>常見問題</h2>
+<h2>支援範圍</h2>
+<p>九巴、城巴、專線綠色小巴、港鐵重鐵。輕鐵、電車、渡輪同紅色小巴未支援。</p>
 
-<h3>點解有時個時間唔準？</h3>
-<p>App 唔會自己估。所有時間都係直接由營運商經 <strong>data.gov.hk 資料一線通</strong>
-出嘅實時到站資料攞返嚟，同你喺站頭電子牌見到嗰個係同一份。塞車、改道、車壞，
-營運商幾時更新，App 就幾時跟。</p>
-<p>如果成條路線都冇數，多數係嗰邊暫時收唔到車，唔係你部機壞。</p>
-
-<h3>點解冇時間表？</h3>
-<p>因為公開資料入面根本冇。呢啲 API 只出「下一班幾時到」，冇出「平日每 12 分鐘一班」
-嗰種班次表。與其自己砌個估算出嚟扮準，不如唔出。</p>
-
-<h3>搵唔到我要嗰條線</h3>
-<p>而家支援<strong>九巴、城巴、專線綠色小巴、港鐵重鐵</strong>。<strong>輕鐵、電車、渡輪、紅色小巴</strong>
-未支援。紅色小巴冇官方實時資料，做唔到。</p>
-<p>如果係上面四種而搵唔到，請電郵話我知條線同方向，我會查。</p>
-
-<h3>通知冇出</h3>
-<p>逐項查：</p>
+<h2 id="sources">資料來源</h2>
 <ul>
-  <li>iOS 設定 → 巴士習慣 → 通知，有冇開；</li>
-  <li>App 內 設定 →「邊個習慣要通知」，嗰個習慣有冇著；</li>
-  <li>今日係咪公眾假期 —— 開咗假期唔通知嘅習慣，假期當日係唔會響嘅；</li>
-  <li>今日係咪嗰個習慣嘅指定星期。</li>
+  <li>實時到站：<a href="https://data.gov.hk/tc-data/provider/hk-td">data.gov.hk 資料一線通</a></li>
+  <li>港鐵綫路及車站：<a href="https://opendata.mtr.com.hk/">港鐵公司開放數據</a></li>
+  <li>公眾假期：<a href="https://www.1823.gov.hk/">1823</a></li>
+  <li>字型：<a href="https://fonts.google.com/specimen/Fredoka">Fredoka</a>，SIL Open Font License 1.1</li>
 </ul>
-<p>通知係喺你設定嘅時間前一段時間響，唔係即時到站提示。</p>
 
-<h3>換咗新 iPhone，習慣會唔會冇咗？</h3>
-<p>只要兩部機都登入同一個 iCloud 帳戶並開咗 iCloud Drive，習慣同路線會自己跟住過去。
-冇登入 iCloud 嘅話，資料淨係留喺原本嗰部機。</p>
-
-<h3>打賞退款</h3>
-<p>打賞係經 App Store 處理，我收唔到你嘅付款資料，亦都退唔到款。
-退款要向 Apple 申請：<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>。</p>
-
-<h3>點刪除我啲資料？</h3>
-<p>冇帳戶，所以冇嘢要「登出」。刪走個 App 就會清走機上嘅資料；
-iCloud 嗰份要喺 iOS 設定 → 你個名 → iCloud → 管理帳戶儲存空間 入面刪。</p>
-<p>私隱詳情見 <a href="../">私隱政策</a>。</p>
-
-<h2 id="sources">資料來源同素材</h2>
-
-<p>App 冇自己嘅伺服器。所有實時到站時間都係你部機直接向以下服務攞，中間冇經我。</p>
-
-<table>
-  <tr><th>來源</th><th>用嚟做乜</th></tr>
-  <tr>
-    <td><a href="https://data.gov.hk/tc-data/provider/hk-td">data.gov.hk 資料一線通</a></td>
-    <td>九巴、城巴、專線綠色小巴、港鐵嘅實時到站時間。每分鐘更新一次。</td>
-  </tr>
-  <tr>
-    <td><a href="https://opendata.mtr.com.hk/">港鐵公司開放數據</a></td>
-    <td>港鐵綫路及車站一覽表。呢份係隨 App 附帶嘅，唔使上網攞。</td>
-  </tr>
-  <tr>
-    <td><a href="https://www.1823.gov.hk/">1823</a></td>
-    <td>香港公眾假期表，用嚟喺假期唔出通知。</td>
-  </tr>
-  <tr>
-    <td><a href="https://fonts.google.com/specimen/Fredoka">Fredoka</a></td>
-    <td>路線號同到站時間用嘅字型。SIL Open Font License 1.1，授權檔隨 App 附帶。</td>
-  </tr>
-</table>
-
-<p>因為係直接連，呢幾個服務會見到你部機嘅 IP 位址。詳情見 <a href="../">私隱政策</a>。</p>
+<h2>打賞退款</h2>
+<p>打賞經 App Store 處理，退款要向 Apple 申請：
+<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>。</p>
 
 <h2 id="english">English</h2>
-<div class="en">
-
-<h3>Data sources and assets</h3>
-<p>The app has no server of ours. Live times come straight from
-<a href="https://data.gov.hk/en-data/provider/hk-td">data.gov.hk</a> (KMB, Citybus, green
-minibus, MTR). The MTR line and station table comes from
-<a href="https://opendata.mtr.com.hk/">MTR's open data</a> and ships inside the app.
-Public holidays come from <a href="https://www.1823.gov.hk/">1823</a>.
-The route-number typeface is <a href="https://fonts.google.com/specimen/Fredoka">Fredoka</a>,
-SIL Open Font License 1.1, whose licence file ships with the app.</p>
-<p>Because the app connects to those services directly, they can see your device's IP address.
-See the <a href="../">privacy policy</a>.</p>
-
-<h3>Contact</h3>
-<p>Email <a href="mailto:amigo.choi@fano.ai">amigo.choi@fano.ai</a>. Include your device model,
-iOS version, and which route or stop was wrong — it makes a real difference.</p>
-
-<h3>Why are the times sometimes off?</h3>
-<p>The app does not estimate anything. Every time comes straight from the operators through
-<strong>data.gov.hk</strong> — the same feed as the electronic sign at the stop. If traffic,
-a diversion or a breakdown delays a bus, the app is as current as the operator is.</p>
-
-<h3>Why is there no timetable?</h3>
-<p>The open data does not contain one. These APIs publish "next arrival", not a schedule.
-Inventing an estimate and presenting it as a timetable would look more useful and be less true.</p>
-
-<h3>My route is missing</h3>
-<p>Supported: <strong>KMB, Citybus, green minibus, and MTR heavy rail</strong>. Light Rail,
-trams, ferries and red minibuses are not — red minibuses publish no real-time data at all.
-If it is one of the four and still missing, email me the route and direction.</p>
-
-<h3>Notifications are not arriving</h3>
-<p>Check iOS Settings → Bus Habits → Notifications; then in the app, Settings → which habits
-have notifications on; then whether today is a public holiday (habits set to stay quiet on
-holidays will); then whether today is one of that habit's weekdays.</p>
-
-<h3>I got a new iPhone</h3>
-<p>Signed in to the same iCloud account with iCloud Drive on, your habits and routes follow you.
-Without iCloud, everything stays on the original device.</p>
-
-<h3>Refunds for tips</h3>
-<p>Tips go through the App Store. I never see your payment details and cannot issue refunds —
-ask Apple at <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
-
-<h3>Deleting your data</h3>
-<p>There are no accounts, so there is nothing to sign out of. Deleting the app removes what is on
-the device; the iCloud copy is removed in iOS Settings → your name → iCloud → Manage Account
-Storage. See the <a href="../">privacy policy</a>.</p>
-
-</div>
+<p>Email <a href="mailto:amigo.choi@fano.ai">amigo.choi@fano.ai</a> with your device model, iOS
+version and the route involved.</p>
+<p>Supported: KMB, Citybus, green minibus, MTR heavy rail. Light Rail, trams, ferries and red
+minibuses are not.</p>
+<p>Data from <a href="https://data.gov.hk/en-data/provider/hk-td">data.gov.hk</a>,
+<a href="https://opendata.mtr.com.hk/">MTR open data</a> and
+<a href="https://www.1823.gov.hk/">1823</a>. Typeface
+<a href="https://fonts.google.com/specimen/Fredoka">Fredoka</a>, SIL OFL 1.1.</p>
+<p>Tip refunds are handled by Apple at
+<a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 
 <footer>
-  巴士習慣 Bus Habits · <a href="../">私隱政策 Privacy Policy</a>
+  <a href="../">私隱政策 Privacy Policy</a>
 </footer>
 
 </main>
