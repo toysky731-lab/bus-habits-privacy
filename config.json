@@ -1,0 +1,7 @@
+{
+  "kmb_base": "https://data.etabus.gov.hk/v1/transport/kmb",
+  "ctb_base": "https://rt.data.gov.hk/v2/transport/citybus",
+  "gmb_base": "https://data.etagmb.gov.hk",
+  "mtr_base": "https://rt.data.gov.hk/v1/transport/mtr",
+  "min_version": "1.0"
+}
